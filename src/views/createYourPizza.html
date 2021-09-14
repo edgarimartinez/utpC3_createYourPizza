@@ -50,6 +50,13 @@
             top: 1rem;
             left: 1rem;
         }
+
+        @media (max-width: 768px) {
+            .cardPizza_id{
+                top: 0rem;
+                left: 0rem;
+            }
+        }
     </style>
 
     <style forClass="content">
@@ -59,9 +66,24 @@
     </style>
 
     <style forClass="pizza-summary">
-        .pizza-summary_button--add{
+        /* .pizza-summary_button--add{
             height: 0.5rem;
             width: 0.5rem;
+        } */
+        .pizza-summary_divisor{
+            border-top: 1px solid #a9a9a9;
+        }
+        .pizza-summary_button--add::after{
+            content: "+";
+        }
+        .pizza-summary_button--remove::after{
+            content: "-";
+        }
+    </style>
+
+    <style forClass="preparation-card">
+        .preparation-card_img--option{
+            width: 2rem;
         }
     </style>
 </head>
@@ -111,8 +133,8 @@
         <div class="container-fluid">
             <div class="row">
 
-                <div class="col-sm-3">
-                    <div class="card row d-flex">
+                <div class="col-md-12 col-lg-4 my-2">
+                    <div class="card row d-flex mx-0">
                         <div class="card-title position-absolute">
                             <h3 class="position-relative cardPizza_id">
                                 #1
@@ -122,60 +144,241 @@
                             <div class="cardPizza_circle--l border rounded-circle position-absolute"></div>
                         </div>
 
-                        <div class="text-center">
-                            <h5>Pizza L ó Mediana 4 porciones</h5>
+                        <div class="text-lg-center px-md-2">
+                            <h5>Pizza Mediana 4 porciones</h5>
                         </div>
 
                         <div class="pizza-sumamry px-2 my-1">
-                            <div class="pizza-summary_item d-flex float-row px-5">
-                                <div class="pizza-summary_description col-sm-6">
-                                    <div>
-                                        <span>1</span> x queso
-                                        <button type="button" class="pizza-summary_button--add btn btn-outline-success rounded-circle">+</button>
-                                        <button type="button" class="btn btn-outline-danger rounded-circle pizza-summary_button--remove">-</button>
-                                    </div>
-                                </div>
-                                <div class="pizza-summary_price col-sm-6">
-                                    <span class="float-end">5.000</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="pizza-sumamry px-2 my-1">
-                            <div class="pizza-summary_item d-flex float-row px-5">
-                                <div class="pizza-summary_description col-sm-6">
-                                </div>
-                                <div class="pizza-summary_price col-sm-6">
-                                    <div class="pizza-summary_divisor"></div>
-                                    <span class="float-end">5.000</span>
-                                </div>
+                            <!-- item ejemplo 1 -->
+                            <div class="pizza-summary_item d-flex px-0 px-lg-3 px-xl-5">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Nombre</th>
+                                        <th class="text-end" scope="col">Valor</th>
+                                        <th class="text-end" scope="col">Acciones</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Tomate</td>
+                                        <td scope="row" class="text-end">5.000</td>
+                                        <td class="text-end">
+                                            <button type="button" class="pizza-summary_button--add btn btn-sm btn-outline-success rounded-circle"></button>
+
+                                            <button type="button" class="pizza-summary_button--remove btn btn-sm btn-outline-danger rounded-circle "></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Queso</td>
+                                        <td scope="row" class="text-end">5.000</td>
+                                        <td class="text-end">
+                                            <button type="button" class="pizza-summary_button--add btn btn-sm btn-outline-success rounded-circle"></button>
+
+                                            <button type="button" class="pizza-summary_button--remove btn btn-sm btn-outline-danger rounded-circle "></button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                    <tfoot>
+                                       <tr>
+                                           <td scope="row" class="text-end" colspan="3">
+                                                10.000
+                                           </td>
+                                           <td scope="row" colspan="1"></td>
+                                       </tr> 
+                                    </tfoot>
+                                  </table>
                             </div>
+
+                            <div class="text-center py-2">
+                                <button class="btn btn-success ">Confirmar</button>
+                            </div>
+
                         </div>
 
                     </div>
                 </div>
 
-                <div class="col-sm-9">
-                    <div class="card d-flex row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="card d-flex row preparation-card mx-0">
 
-                        <div class="btn-group btn-group-lg col-sm-12" role="group" aria-label="Large button group">
-                            <button type="button" class="btn btn-outline-dark">Left</button>
-                            <button type="button" class="btn btn-outline-dark">Middle</button>
-                            <button type="button" class="btn btn-outline-dark">Right</button>
+                        <div class="btn-group btn-group-lg col-sm-12 preparation-card_options p-0" role="group" aria-label="Large button group">
+                            <button type="button" class="btn btn-success" disabled>
+                                <div>
+                                    <img class="preparation-card_img--option" src="../images/rolling-pin.svg" alt="">
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-success" disabled>
+                                <img class="preparation-card_img--option" src="../images/sauces.svg" alt="">
+                            </button>
+                            <button type="button" class="btn btn-outline-success">
+                                <img class="preparation-card_img--option" src="../images/ingredients.svg" alt="">
+                            </button>
                         </div>
 
-                        <div class="container-fluid col-sm-12">
+                        <div class="container-fluid">
                             <div class="row">
-                                <div class="col-sm-3 card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">
-                                          <i class="fas fa-chart-pie mr-1"></i>
-                                          Sales
-                                        </h3>
-                                      </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+                                    <div class="card">
+
+                                        <div class="card-header">
+                                            <h3 class="card-title d-flex">
+                                                <img class="preparation-card_img--option me-2" src="../images/tomato.svg" alt="">        
+                                                <span>
+                                                    Tomate
+                                                </span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="preparation-description">
+                                                    1 adiciona la medida, exquisita descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis.
+                                                </div>
+                                                <div class="text-center">
+                                                    $ 5.000
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-sm btn-outline-success rounded-circle">+</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-danger rounded-circle">-</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-info rounded-pill">A tu gusto!</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <!-- RELLENO -->
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+                                    <div class="card">
+
+                                        <div class="card-header">
+                                            <h3 class="card-title d-flex">
+                                                <img class="preparation-card_img--option me-2" src="../images/tomato.svg" alt="">        
+                                                <span>
+                                                    Tomate
+                                                </span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="preparation-description">
+                                                    1 adiciona la medida, exquisita descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis.
+                                                </div>
+                                                <div class="text-center">
+                                                    $ 5.000
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-sm btn-outline-success rounded-circle">+</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-danger rounded-circle">-</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-info rounded-pill">A tu gusto!</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+                                    <div class="card">
+
+                                        <div class="card-header">
+                                            <h3 class="card-title d-flex">
+                                                <img class="preparation-card_img--option me-2" src="../images/tomato.svg" alt="">        
+                                                <span>
+                                                    Tomate
+                                                </span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="preparation-description">
+                                                    1 adiciona la medida, exquisita descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis.
+                                                </div>
+                                                <div class="text-center">
+                                                    $ 5.000
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-sm btn-outline-success rounded-circle">+</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-danger rounded-circle">-</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-info rounded-pill">A tu gusto!</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+                                    <div class="card">
+
+                                        <div class="card-header">
+                                            <h3 class="card-title d-flex">
+                                                <img class="preparation-card_img--option me-2" src="../images/tomato.svg" alt="">        
+                                                <span>
+                                                    Tomate
+                                                </span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="preparation-description">
+                                                    1 adiciona la medida, exquisita descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis.
+                                                </div>
+                                                <div class="text-center">
+                                                    $ 5.000
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-sm btn-outline-success rounded-circle">+</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-danger rounded-circle">-</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-info rounded-pill">A tu gusto!</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-2">
+                                    <div class="card">
+
+                                        <div class="card-header">
+                                            <h3 class="card-title d-flex">
+                                                <img class="preparation-card_img--option me-2" src="../images/tomato.svg" alt="">        
+                                                <span>
+                                                    Tomate
+                                                </span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="preparation-description">
+                                                    1 adiciona la medida, exquisita descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis.
+                                                </div>
+                                                <div class="text-center">
+                                                    $ 5.000
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-sm btn-outline-success rounded-circle">+</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-danger rounded-circle">-</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-info rounded-pill">A tu gusto!</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FIN RELLENO -->
+                                
                             </div>
                         </div>
+
                     </div>
                 </div>
 
