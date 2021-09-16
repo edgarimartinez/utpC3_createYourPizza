@@ -7,17 +7,16 @@
 }
 
 body {
-    background-image: url(pizza1.jpg);
+    background-image: url(pizza.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
 
-.titulo {
+h1 {
     font-size: 80px;
     color: #bc4749;
-    border: 2px solid #6a994e;
     margin: 50, 50;
     text-align: center;
     width: 300;
