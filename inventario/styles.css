@@ -14,11 +14,18 @@ body{
 .center{
     background: white;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 60px ;
-    padding: 20;   
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-bottom: 30px;
 }
 
 .center h2{
     font-size:30px;
+}
+
+.greenbtn{
+    background: #6a994e;
+    text-align: center;
+    color: white;
+
 }
