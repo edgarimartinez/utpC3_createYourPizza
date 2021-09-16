@@ -33,6 +33,7 @@ body{
 #table-zone{
     padding-bottom: 0px;
 }
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -43,4 +44,17 @@ td, th {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
+}
+
+#registro{
+    background:#a0c355;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.cancelBtn{
+    background: #bc4749;
+    color: white;
 }
