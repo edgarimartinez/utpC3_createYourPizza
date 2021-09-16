@@ -23,11 +23,16 @@ body{
     font-size:30px;
 }
 
+.center label{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .greenbtn{
     background: #6a994e;
     text-align: center;
     color: white;
-
+    padding: 10px;
 }
 
 #table-zone{
@@ -54,7 +59,13 @@ td, th {
     padding-bottom: 30px;
 }
 
+#registro label{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .cancelBtn{
     background: #bc4749;
     color: white;
+    padding: 10px;
 }
