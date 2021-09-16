@@ -1,11 +1,45 @@
 <style>
+* { box-sizing:border-box; }
 body{
- background: gray;
+ background-color: gray;
+}
+.container { 
+  font-family:'Roboto';
+  width:600px; 
+  margin:30px auto 0; 
+  display:block; 
+  background:#FFF;
+  padding:10px 50px 50px;
 }
 h1{
-
+ color: blue;
 }
 p{
 
 }
+input, select{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.group { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+input:focus{ outline:none; }
 </style>
