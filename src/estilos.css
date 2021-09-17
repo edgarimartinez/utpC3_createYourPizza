@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+footer{
+    width: 100%;
+    background: rgb(181, 71, 73 );
+    color: rgb(242, 232, 207 );
+}
+
+.container_footer_all{
+    width: 100%;
+    max-width: 1200px;
+    margin:auto
+}
+
+.container_body{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.column1{
+    max-width: 400px;
+}
+
+.column1.h2{
+    font-size: 18px;
+}
+
+.column1 .legal_options{
+    font-size: 12px;
+    color: rgb(242, 232, 207 );
+    margin-top: 20px;
+}
+
+.column2{
+    max-width: 400px;
+}
+
+.column2.h2{
+    font-size: 18px;
+}
+
+.logo img{
+    width: 200px;
+    height: 100px;
+    list-style-image: cross-fade();
+}
+.column3{
+    max-width: 400px;
+}
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chartset="UTF-8">
+    <title>Barra de navegación</title>
+
+    <style>
+        body{background-color: rgb(56, 102, 65);padding: auto;font-family: Arial, Helvetica, sans-serif;}
+    
+        #menu {
+           background-color: rgb(242, 232, 207); 
+        }
+
+        #menu ul {
+            list-style: none;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        #menu ul li{
+            display: inline-block;
+        }
+
+        #menu ul li a{
+            color: black;
+            display: block;
+            padding: 30px 80px;
+            text-decoration: none;
+        }
+
+        #menu ul li a:hover{
+            background-color: rgb(167, 201, 87);
+        }
+        .item-r{
+            float: right;
+        }
+
+        .container-body{
+            display: flex;
+        }
+
+        #menu2 {
+           background-color: rgb(167, 201, 87); 
+        }
+
+        #menu2 ul {
+            list-style-image: none;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        #menu2 ul li a{
+            color: black;
+            display: block;
+            padding: 10px 20px;
+            text-decoration:solid;
+        }
+
+        #menu2 ul li a:hover{
+            background-color: rgb(242, 232, 207);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="justify-content-xxl-center rounded-pill" id="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Registro</a></li>
+            <li class="item-r"><a href="#">Login</a></li>            
+        </ul>
+    </div>
+
+    <div class="container-body">
+        <div class="column1"> 
+            <p>
+                <img src="log_proyectomintic.png"/>
+            </p>
+            <div id="menu2">
+                <ul>
+                    <li class="item-c"><a href="#">INGREDIENTES</a></li>
+                    <li class="item-d"><a href="#">ARMA TU PIZZA</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column2">
+            <p>
+                <img src="pizza-3010062_1280.jpg" width="1000" height="500">
+            </p>
+        </div>
+     
+    </div>
+ 
+        
+    
+</body>
+</html>
